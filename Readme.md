@@ -2,9 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-13.5+-000000.svg?logo=next.js)](https://nextjs.org/)
-[![Quran API](https://img.shields.io/badge/Quran_API-v4-blue.svg)](https://alquran.cloud/api)
 
-A modern web application for listening to and reading the Holy Quran with multiple reciters. Built with Next.js and powered by the Al-Quran Cloud API.
+A modern web application for listening to and reading the Holy Quran with multiple reciters. Built with Next.js and powered by the Quran API.
 
 
 ## Features ✨
