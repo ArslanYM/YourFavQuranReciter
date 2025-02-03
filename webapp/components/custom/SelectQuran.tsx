@@ -62,7 +62,7 @@ export function SelectQuran() {
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline">Cancel</Button>
-          <Button>Deploy</Button>
+          <Button>Search</Button>
         </CardFooter>
       </Card>
     )

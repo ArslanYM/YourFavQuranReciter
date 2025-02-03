@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Appbar() {
     return (
       <>
-        <nav className=" px-4 md:px-32 lg:px-46 py-4 md:py-6 lg:py-8 flex flex-col md:flex-row justify-between items-center">
+        <nav className=" px-4 md:px-32 lg:px-46 py-4 md:py-4 lg:py-4 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center">
           <Link href={"/"}>
           <div className="flex h-8 w-8 items-center justify-center rounded-md">
@@ -13,7 +13,7 @@ export default function Appbar() {
               </div>
           </Link>
           
-          <Link href={"/home"}>
+          <Link href={"/"}>
             <Button
               variant="link"
               className="font-md font-semibold font-mono  text-xl"
