@@ -1,4 +1,4 @@
-import { CardWithForm, SelectQuran } from "@/components/custom/SelectQuran";
+import { SelectQuran } from "@/components/custom/SelectQuran";
 
 export default function ListenPage() {
     return(
