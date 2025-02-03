@@ -71,3 +71,17 @@ If you find this project useful, please consider:
 ☕ Buying us a coffee
 
 Note: This project is intended for educational and spiritual purposes. Please ensure proper attribution of all Quranic texts and audio files according to Islamic guidelines.
+
+
+# API 
+- // Reciter ID	Name
+// 1	Mishary Rashid Al-Afasy
+// 2	Abu Bakr Al-Shatri
+// 3	Nasser Al Qatami
+
+// Request format
+// Make a GET request to /<reciterNo>/<surahNo>_<ayahNo>.mp3
+
+// Example
+// Endpoint: /2/1_2.mp3
+// Raw Url: https://quranaudio.pages.dev/2/1_2.mp3
