@@ -18,10 +18,11 @@ export default function ListenPage() {
   <div className=" flex flex-col md:flex-row items-center justify-center gap-4 p-4 w-full max-w-4xl">
    
     <SelectQuran />
+    {/* TODO: this above card needs to be made dynamic  */}
     <AudioPlayer />
   </div>
 </div>
-        {/* TODO: this above card needs to be made dynamic  */}
+        
         </div>
     )
 }
@@ -30,15 +31,15 @@ export default function ListenPage() {
 
 
 
-export const AudioPlayer = () => {
+ const AudioPlayer = () => {
     const [isLoading, setIsLoading] = React.useState(false);
 
   return (
     <Card className="w-[350px]">
-       <div className="flex flex-col items-center justify-center  ">
+       <div className="flex flex-col items-center justify-center">
        <CardHeader>
           <CardTitle>Playing your Favorite Reciter</CardTitle>
-          <CardDescription>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيْمِ. </CardDescription>
+          <CardDescription>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيْمِ.</CardDescription>
         </CardHeader>
        </div>
         <CardContent>
@@ -55,7 +56,7 @@ export const AudioPlayer = () => {
 
 
 
-export const Loader = () => {
+ const Loader = () => {
   return (
     <div>Searching...</div>
   )
