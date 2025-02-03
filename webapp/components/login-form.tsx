@@ -24,7 +24,7 @@ export function LoginForm({
               <span className="sr-only">Your Favorite Quran Reader</span>
             </a>
             <h1 className="text-xl font-bold">Welcome to
-               your Favorite Quran Reader</h1>
+               Your Favorite Quran Reader</h1>
             <div className="text-center text-sm">
               Don&apos;t have an account?{""}
               <a href="#" className="underline underline-offset-4">
