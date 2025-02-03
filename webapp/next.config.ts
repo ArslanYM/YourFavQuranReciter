@@ -1,19 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '',
+        hostname: 'my-domainename.com',
         port: '',
-        pathname: '/account123/**',
-        search: '',
-      },
-    ],
-  },
+        pathname: '/'
+      }
+    ]
+  }
 };
 
 export default nextConfig;
-
