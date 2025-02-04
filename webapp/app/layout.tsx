@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Appbar from "@/components/custom/Appbar";
 import { Footer } from "@/components/custom/Footer";
-import { SessionProvider } from "next-auth/react";
 import { Providers } from "./providers";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  session: any;
   children: React.ReactNode;
 }>) {
   return (
@@ -32,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Appbar/>
-    <Providers>{children}</Providers>
+        <Providers>{children}</Providers>
         <Footer/>
       </body>
     </html>
