@@ -27,7 +27,7 @@ export default function Appbar() {
       src="/bismillah.png"
       width={200}
       height={200}
-      style={{ width: '20%', height: 'auto' }}
+      style={{ width: 'auto', height: 'auto' }}
       alt="Picture of the author"
     />
 
