@@ -1,15 +1,46 @@
 "use client";
-import { AudioProgress } from "@/components/custom/AudioProgress";
-import { Loader } from "@/components/custom/Loader";
-
-import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription ,CardFooter } from "@/components/ui/card";
-import React from "react";
+import { useIsLoadingStore } from "@/stores/isLoadingStore";
+import { useIsPlayingStore } from "@/stores/isPlayingStore";
+import { useQuranStore } from "@/stores/quranStore";
+import React, { useEffect } from "react";
 
 export const AudioPlayer = () => {
-    const [isLoading, setIsLoading] = React.useState(false);
+    const [audioSrc, setAudioSrc] = React.useState<string>("//");
+const { 
+           ayatNumber,
+           surahNumber,
+           reciterNumber 
+         } = useQuranStore();
 
-  return (
+
+         const {
+          isLoading,
+          setIsLoading
+        } = useIsLoadingStore();
+
+
+        useEffect(() => {
+          if(isLoading){
+
+            getAudio();
+          }
+
+
+        }, [isLoading])
+    async function getAudio() {
+      const res = await fetch(`https://quranaudio.pages.dev/${reciterNumber}/${surahNumber}_${ayatNumber}.mp3`, { next: { revalidate: 3600 } });
+      
+      if (!res.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      
+        setIsLoading(false);  
+        setAudioSrc(`https://quranaudio.pages.dev/${reciterNumber}/${surahNumber}_${ayatNumber}.mp3`)
+  
+    }
+  
+    return (
     <Card className="w-[350px]">
        <div className="flex flex-col items-center justify-center">
        <CardHeader>
@@ -18,12 +49,9 @@ export const AudioPlayer = () => {
         </CardHeader>
        </div>
         <CardContent>
-          <AudioProgress />
+          <audio src={audioSrc} controls autoPlay> 
+</audio>
         </CardContent>
-        <CardFooter className="flex justify-center gap-4">
-          <Button variant="outline">{isLoading? <Loader/> : "Play" }</Button>
-          
-        </CardFooter>
       </Card>
     
   )

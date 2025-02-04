@@ -1,28 +1,15 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { AudioPlayer } from "@/components/custom/AudioPlayer";
 import { SelectQuran } from "@/components/custom/SelectQuran";
+import { useQuranStore } from "@/stores/quranStore";
+import { useIsLoadingStore } from "@/stores/isLoadingStore";
 
 
 
 
 
 export default function ListenPage() {
-
-  const [ayatNumber, setAyatNumber] = React.useState(0);
-  const [surahNumber, setSurahNumber] = React.useState(0);
-  const [reciterNumber, setReciterNumber] = React.useState(0);
-  const [audio, setAudio] = React.useState(null);
-  async function getAudio() {
-    const res = await fetch(`https://quranaudio.pages.dev/${reciterNumber}/${surahNumber}_${ayatNumber}.mp3`, { next: { revalidate: 3600 } });
-    
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    console.log(res.json());
-  }
-
-
     
      
     return(
