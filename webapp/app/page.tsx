@@ -14,7 +14,7 @@ export default function LoginPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <img
-          src="/praying.jpeg"
+          src="/images/praying.jpeg"
           alt="Image"
           className=" rounded-2xl  absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

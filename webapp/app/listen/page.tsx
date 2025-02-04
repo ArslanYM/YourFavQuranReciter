@@ -12,7 +12,7 @@ import React from "react";
 export default function ListenPage() {
     
     return(
-        <div className="bg-[url(/bg.jpg)] bg-cover bg-center rounded-full">
+        <div className="bg-[url(/images/bg.jpg)] bg-cover bg-center rounded-3xl ">
      
        <div className="min-h-screen flex items-center justify-center">
   <div className=" flex flex-col md:flex-row items-center justify-center gap-4 p-4 w-full max-w-4xl">
