@@ -8,7 +8,7 @@ export const Footer = () => {
       <footer className="mt-10 text-gray-600 ">
         <div className="container px-4 md:px-32 lg:px-52 py-4 md:py-6 lg:py-8 flex flex-col md:flex-row justify-between items-center">
           <a className="flex   items-center md:justify-start justify-center text-gray-900">
-            <span className="font-md font-semibold font-mono  text-xl">YFQR</span>
+            <span className="font-md font-semibold font-mono  text-xl">YourFavQuranReader</span>
           </a>
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
             © 2025 YFQR —
@@ -18,7 +18,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              @ArlanYM
+              @ArslanYM
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
