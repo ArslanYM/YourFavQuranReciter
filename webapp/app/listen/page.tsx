@@ -25,7 +25,7 @@ export default function ListenPage() {
 
 
 
-export function TypographyH2() {
+ function TypographyH2() {
   return (
     <h2 className="scroll-m-20 border-b pb-2 text-xl font-semibold tracking-tight first:mt-0">
       <Link href={"/login"}><Button variant="ghost"> <span className="text-3xl">Login/SignUp</span> </Button></Link>to get access to more features.
