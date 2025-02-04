@@ -43,8 +43,8 @@ export default function Appbar() {
             </Link>
           </li>
           <li>
-            <Link href={"https://github.com/ArslanYM/YourFavQuranReciter"}>
-              <Button variant="link">Repo</Button>
+            <Link href={"/login"}>
+              <Button variant="link">Login/SignUp</Button>
             </Link>
           </li>
         </ul>

@@ -10,7 +10,7 @@ export const AudioPlayer = () => {
 const { 
            ayatNumber,
            surahNumber,
-           reciterNumber 
+           reciterNumber ,
          } = useQuranStore();
 
 
