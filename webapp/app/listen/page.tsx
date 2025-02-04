@@ -1,16 +1,30 @@
 "use client";
-import { AudioProgress } from "@/components/custom/AudioProgress";
-import { SelectQuran } from "@/components/custom/SelectQuran";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription ,CardFooter } from "@/components/ui/card";
 import React from "react";
+import { AudioPlayer } from "@/components/custom/AudioPlayer";
+import { SelectQuran } from "@/components/custom/SelectQuran";
 
 
 
 
 
 export default function ListenPage() {
+
+  const [ayatNumber, setAyatNumber] = React.useState(0);
+  const [surahNumber, setSurahNumber] = React.useState(0);
+  const [reciterNumber, setReciterNumber] = React.useState(0);
+  const [audio, setAudio] = React.useState(null);
+  async function getAudio() {
+    const res = await fetch(`https://quranaudio.pages.dev/${reciterNumber}/${surahNumber}_${ayatNumber}.mp3`, { next: { revalidate: 3600 } });
     
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    console.log(res.json());
+  }
+
+
+    
+     
     return(
         <div className="bg-[url(/images/bg.jpg)] bg-cover bg-center rounded-3xl ">
      
@@ -31,33 +45,7 @@ export default function ListenPage() {
 
 
 
- const AudioPlayer = () => {
-    const [isLoading, setIsLoading] = React.useState(false);
-
-  return (
-    <Card className="w-[350px]">
-       <div className="flex flex-col items-center justify-center">
-       <CardHeader>
-          <CardTitle>Playing your Favorite Reciter</CardTitle>
-          <CardDescription>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيْمِ.</CardDescription>
-        </CardHeader>
-       </div>
-        <CardContent>
-          <AudioProgress />
-        </CardContent>
-        <CardFooter className="flex justify-center gap-4">
-          <Button variant="outline">{isLoading? <Loader/> : "Play" }</Button>
-          
-        </CardFooter>
-      </Card>
-    
-  )
-}
+ 
 
 
 
- const Loader = () => {
-  return (
-    <div>Searching...</div>
-  )
-}
