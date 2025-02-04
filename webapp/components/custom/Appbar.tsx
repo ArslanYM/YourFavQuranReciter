@@ -24,10 +24,10 @@ export default function Appbar() {
         </div>
 
         <Image
-      src="/bismillah.png"
-      width={200}
+      src="/images/bismillah2.png"
+      width={300}
       height={200}
-      style={{ width: 'auto', height: 'auto' }}
+     className="mx-6"
       alt="Picture of the author"
     />
 
