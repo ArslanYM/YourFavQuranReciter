@@ -4,14 +4,14 @@ import { BookOpen } from "lucide-react"
 import Link from "next/link"
 export default function LoginPage() {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <div className=" min-h-screen flex flex-col items-center justify-center gap-12 md:p-10 ">
      
       <div className="flex  items-center justify-center rounded-md">
                 <BookOpen className="size-20" />
          </div>
         <TypographyH2/>
-       <Link href={"/login"}><Button variant={"default"}>Get Started</Button></Link> 
+       <Link href={"/listen"}><Button variant={"default"}>Get Started</Button></Link> 
 
     
     </div>
@@ -26,7 +26,7 @@ export default function LoginPage() {
 
  function TypographyH2() {
   return (
-    <h2 className="scroll-m-20 border-b pb-2 text-3xl  tracking-tight first:mt-0">
+    <h2 className="scroll-m-20 border-b pb-2 text-3xl  tracking-tight first:mt-0 m-6">
      Welcome to <span className="text-4xl font-semibold">
       {"    "}Your Favorite Quran Reciter.</span>
     </h2>
