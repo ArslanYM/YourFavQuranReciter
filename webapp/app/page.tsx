@@ -1,4 +1,4 @@
-import { LoginForm } from "@/components/login-form"
+import { LoginForm } from "@/components/ui/login-form"
 import { Button } from "@/components/ui/button"
 import { BookOpen } from "lucide-react"
 import Link from "next/link"

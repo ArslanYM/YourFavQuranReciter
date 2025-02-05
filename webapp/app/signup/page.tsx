@@ -1,10 +1,9 @@
 "use client"
-
-import { LoginForm } from "@/components/ui/login-form"
 import { Button } from "@/components/ui/button"
 import { Session } from "next-auth"
 import { signOut, useSession } from "next-auth/react"
 import Link from "next/link"
+import { SignUpForm } from "@/components/ui/signup-form"
 
 export default function LoginPage() {
   const { data: session } = useSession()
@@ -22,7 +21,7 @@ export default function LoginPage() {
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
 
-            <LoginForm />
+            <SignUpForm />
           </div>
         </div>
       </div>
