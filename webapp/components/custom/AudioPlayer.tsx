@@ -30,12 +30,13 @@ const {
         }, [isLoading])
     async function getAudio() {
       const res = await fetch(`https://quranaudio.pages.dev/${reciterNumber}/${surahNumber}_${ayatNumber}.mp3`, { next: { revalidate: 3600 } });
+
       
       if (!res.ok) {
         throw new Error('Failed to fetch data');
       }
       
-        setIsLoading(false);  
+        setIsLoading(false); 
         setAudioSrc(`https://quranaudio.pages.dev/${reciterNumber}/${surahNumber}_${ayatNumber}.mp3`)
   
     }
@@ -45,7 +46,7 @@ const {
        <div className="flex flex-col items-center justify-center">
        <CardHeader>
           <CardTitle>Playing your Favorite Reciter</CardTitle>
-          <CardDescription>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيْمِ.</CardDescription>
+          <CardDescription className="text-lg">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيْمِ.</CardDescription>
         </CardHeader>
        </div>
         <CardContent>
