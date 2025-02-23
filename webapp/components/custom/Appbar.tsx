@@ -33,7 +33,7 @@ export default function Appbar() {
 
         <ul className="flex items-center">
           <li>
-            <Link href={"/guide"}>
+            <Link href={"https://github.com/ArslanYM/YourFavQuranReciter/blob/main/Readme.md"}>
               <Button variant="link">Guide</Button>
             </Link>
           </li>
